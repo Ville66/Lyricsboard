@@ -10,7 +10,7 @@
 <body>
     <h1>Lyrics Board</h1>
 
-    <div id="start"></div>
+    <br>
     
     <div id="game">
         <button type="button" onclick="show1()">1</button>
@@ -20,14 +20,33 @@
         <button type="button" onclick="show5()">5</button>
         <button type="button" onclick="show6()">6</button>
         <br>
-        <span id="lyrics1" style="display: none;">...</span>
-        <span id="lyrics2" style="display: none;">...</span>
-        <span id="lyrics3" style="display: none;">...</span>
-        <span id="lyrics4" style="display: none;">...</span>
-        <span id="lyrics5" style="display: none;">...</span>
-        <span id="lyrics6" style="display: none;">...</span>
+        <span id="lyrics1" style="visibility: hidden;">...</span>
+        <span id="lyrics2" style="visibility: hidden;">...</span>
+        <span id="lyrics3" style="visibility: hidden;">...</span>
+        <span id="lyrics4" style="visibility: hidden;">...</span>
+        <span id="lyrics5" style="visibility: hidden;">...</span>
+        <span id="lyrics6" style="visibility: hidden;">...</span>
     </div>
 
-    <div id="points"><p id="lyrics"></p></div>
+    <br>
+
+    <div id="guess">
+        <form id="song1guess">
+            <input type="text" id="guess_input1"><input type="button" value="guess" onclick="guess1()">
+        </form>
+        <form id="song2guess" style="display: none;">
+            <input type="text" id="guess_input2"><input type="button" value="guess" onclick="guess2()">
+        </form>
+        <form id="song3guess" style="display: none;">
+            <input type="text" id="guess_input3"><input type="button" value="guess" onclick="guess3()">
+        </form>
+    </div>
+
+    <br>
+
+    <div id="points">
+        <span>Points: </span>
+        <span id="points_counter">0</span>
+    </div>
 </body>
 </html>
